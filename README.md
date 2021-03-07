@@ -84,13 +84,13 @@ Nós usamos [GitHub](https://github.com/) para controle de versão. Para as vers
 ## ✒️ Criadores
 <br>
 
-⚙️📀 **Caroline Noronha** - *Back-end e Dados* - [GitHub](https://github.com/)
+⚙️📀 **Caroline Noronha** - *Back-end e Dados* - [GitHub](https://github.com/carolinenoronha)
 
 💻 **João Vitor Granjeiro** - *Front-end* - [GitHub](https://github.com/)
 
 ⚙️📀 **Marcella Justo** - *Back-end e Dados* - [GitHub](https://github.com/justo-marcella)
 
-💻**Marcelo Moita** - *Front-end* - [GitHub](https://github.com/)
+💻**Marcelo Moita** - *Front-end* - [GitHub](https://github.com/Moitank)
 
 🚀💡💻 **Roberta Santos** - *Produto, Design UX-UI e Front-end* - [GitHub](https://github.com/LaDespistada1981)
 

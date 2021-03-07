@@ -1,0 +1,23 @@
+{
+  "name": "resilia_m4u",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Olá 👋, Somos alunes da Resilia Educação</h1>\r <h3 align=\"center\">Este é nosso projeto de conclusão de curso.</h3><br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaDespistada1981/resilia_m4u.git"
+  },
+  "keywords": [],
+  "author": "Caroline Noronha e Marcella Justo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaDespistada1981/resilia_m4u/issues"
+  },
+  "homepage": "https://github.com/LaDespistada1981/resilia_m4u#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
