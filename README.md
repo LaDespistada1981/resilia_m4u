@@ -84,7 +84,7 @@ Nós usamos [GitHub](https://github.com/) para controle de versão. Para as vers
 ## ✒️ Criadores
 <br>
 
-⚙️📀 **Caroline Noronha** - *Back-end e Dados* - [GitHub](https://github.com/)
+⚙️📀 **Caroline Noronha** - *Back-end e Dados* - [GitHub](https://github.com/carolinenoronha)
 
 💻 **João Vitor Granjeiro** - *Front-end* - [GitHub](https://github.com/)
 
