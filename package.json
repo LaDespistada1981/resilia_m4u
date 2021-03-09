@@ -4,6 +4,7 @@
   "description": "<h1 align=\"center\">Olá 👋, Somos alunes da Resilia Educação</h1>\r <h3 align=\"center\">Este é nosso projeto de conclusão de curso.</h3><br>",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./backend/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/LaDespistada1981/resilia_m4u#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
