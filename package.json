@@ -4,7 +4,7 @@
   "description": "<h1 align=\"center\">Olá 👋, Somos alunes da Resilia Educação</h1>\r <h3 align=\"center\">Este é nosso projeto de conclusão de curso.</h3><br>",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./backend/app.js",
+    "start": "nodemon ./backend/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
