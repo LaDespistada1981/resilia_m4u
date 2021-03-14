@@ -12,11 +12,11 @@ app.get('/', (req,resp) =>{
   console.log('Oi, eu sou a homepage!')
 })
 
-const usersController = require('./controller/users-controller')
+// const usersController = require('./controller/users-controller')
 
-const creditCardsController = require('./controller/creditcards-controller')
+// const creditCardsController = require('./controller/creditcards-controller')
 
-const servicesController = require('./controller/services-controller')
+// const servicesController = require('./controller/services-controller')
 
 
 /* ROTAS
