@@ -1,4 +1,7 @@
-//Cadastro de cartão
+const creditCardsDAO = require('../DAO/creditcards-DAO')
+module.exports = (app,bd) =>{
+
+    const cDAO = new creditCardsDAO(bd) 
 
 app.post('/creditcards/register', (req, resp) =>{
     console.log ("POST cartão")
@@ -15,3 +18,4 @@ app.post('/creditcards/register', (req, resp) =>{
   app.delete('/creditcards/register/:id', (req, resp) =>{
     console.log ("DELETE cartão")
   })
+}

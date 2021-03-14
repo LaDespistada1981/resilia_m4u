@@ -1,3 +1,8 @@
+const usersDAO = require('../DAO/users-DAO')
+
+module.exports = (app, bd) => {
+
+    const uDAO = new usersDAO(bd)
 
 //Login
 app.post('/user/login', (req, resp) =>{
@@ -21,3 +26,5 @@ app.post('/user/login', (req, resp) =>{
   app.delete('/user/register/:id', (req, resp)=>{
     console.log("Oi, eu sou o delete do cadastro")
   })
+
+}  
