@@ -1,0 +1,31 @@
+header {
+  background-image: linear-gradient(to right, #223a8d, #4c63f7);
+  width: 100vw;
+  height: 10vh;
+}
+
+.logo {
+  color: #ffffff;
+  margin: auto 30px;
+}
+
+.txt-color-white {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 50px;
+}
+
+footer {
+  display: block;
+  width: 100vw;
+  height: 5vh;
+  background-image: linear-gradient(to right, #223a8d, #4c63f7);
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+}
+
+p {
+  text-align: center;
+  margin: auto;
+}

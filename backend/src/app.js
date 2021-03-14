@@ -1,6 +1,13 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 const port = 8080;
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+const cors = require('cors');
+app.use(cors());
 
 app.listen(port, ()=>{
   console.log("Server is running!")
@@ -11,25 +18,4 @@ app.listen(port, ()=>{
 app.get('/', (req,resp) =>{
   console.log('Oi, eu sou a homepage!')
 })
-
-// const usersController = require('./controller/users-controller')
-
-// const creditCardsController = require('./controller/creditcards-controller')
-
-// const servicesController = require('./controller/services-controller')
-
-
-/* ROTAS
-/homepage
-/login
-/register
-/recharge
-/chip-buy */
-
-
-//Login - POST
-//Cadastro de usuário - POST, UPDATE
-//Cadastro de cartão - GET, POST, UPDATE, DELETE
-//Compra de chip - POST
-//Recarga - POST
 
