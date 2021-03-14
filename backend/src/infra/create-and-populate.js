@@ -19,10 +19,10 @@ const USERS_SCHEMA = `
 
   const ADD_USERS_DATA = `
   
-    INSERT INTO USERS (ID_USER, NOME, CPF, EMAIL, SENHA)
+    INSERT INTO USERS (NOME, CPF, EMAIL, SENHA)
     VALUES
       ('Marcella Justo', '12345678910', 'justoamarcella@gmail.com', 'vailavai123'),
-      ('Caroline Noronha', '10987654321', 'carolnt@gmail.com', 'gostosapracaramba')
+      ('Caroline Noronha', '10987654321', 'carolnt@gmail.com', 'grafenoepao')
 
   `
 
@@ -42,11 +42,46 @@ function populaTabelaUser(){
 
 const CARDS_SCHEMA = `
 
-CREATE TABLE IF NOT EXISTS CARDS (
-  'ID_CARDS' INTEGER PRIMARY KEY AUTOINCREMENT,
-  'NUMBER' VARCHAR(10),
-  'NICKNAME' VARCHAR(25),
-  'EXPIRATION' DATE,
-  'ID_USERS' INTEGER,
-  FOREIGN KEY (ID_USERS) REFERENCES USERID(ID)
-);`;
+  CREATE TABLE IF NOT EXISTS CARDS (
+    'ID_CARDS' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'NUMBER' VARCHAR(10),
+    'NICKNAME' VARCHAR(25),
+    'EXPIRATION' DATE,
+    'ID_USERS' INTEGER,
+    FOREIGN KEY (ID_USERS) REFERENCES USERID(ID)
+  );`;
+
+const ADD_CARDS_DATA = `
+  
+  INSERT INTO CARDS (NUMBER, NICKNAME, EXPIRATION, ID_USERS)
+  VALUES
+    ('1234********4321', 'itaú', 24-11, 1),
+    ('1234********4223', 'NuConta', 24-12, 1),
+    ('1334********4221', 'itaú', 24-11, 2)
+`
+
+function criaTabelaCards(){
+  db.run(CARDS_SCHEMA, (error)=>{
+    if(error) console.log("Erro ao criar tabela Cards");
+  });
+}
+
+function populaTabelaCards(){
+  db.run(ADD_CARDS_DATA, (error)=>{
+    if (error) console.log("Erro ao popular tabela Cards");
+  });
+}
+
+/*     Histórico
+criar e popular tabela histórico
+*/
+
+db.serialize(()=>{
+  criaTabelaUser();
+  populaTabelaUser();
+  criaTabelaCards();
+  populaTabelaCards();
+
+});
+
+
