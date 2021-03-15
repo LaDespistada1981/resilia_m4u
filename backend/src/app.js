@@ -1,4 +1,3 @@
-const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 const port = 8080;
@@ -10,7 +9,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.listen(port, ()=>{
-  console.log("Server is running!")
+  console.log(`Server is running at port ${port}!`)
 });
 
 
@@ -18,4 +17,7 @@ app.listen(port, ()=>{
 app.get('/', (req,resp) =>{
   console.log('Oi, eu sou a homepage!')
 })
+
+const userController = require('./controller/users-controller')
+userController(app)
 
