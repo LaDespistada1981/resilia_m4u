@@ -1,0 +1,22 @@
+/* Config. Globais */
+:root {
+  --black: #212121;
+  --white: #ffffff;
+  --blueGradiente: linear-gradient(
+    45deg,
+    rgba(34, 58, 141, 1) 0%,
+    rgba(76, 99, 247, 1) 100%
+  );
+  --blueButton: #4c63f7;
+  --modalBg: #3b53cc 35%;
+  --greyDisable: #bec6dd;
+  --middleLanding: #233b8f 15%;
+  --fontGeral: "Jost", sans-serif;
+  --fontLabelForm: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
