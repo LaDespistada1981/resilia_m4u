@@ -16,6 +16,7 @@
   align-items: center;
   background-color: #AFB8E2;
   border-radius: 30px;
+  padding: 40px;
 }
 
 .section-historico > div {
@@ -34,10 +35,22 @@
     align-self: flex-end;
 }
 
+.cartoes {
+    margin-top: 100px;;
+}
+
+.cartoes select {
+    margin-top: 10px;
+}
+
+
+
 
 
 .section-solicitacao {
   grid-area: solicitacao;
+  font-family: var(--fontGeral);
+  font-weight: initial;
 }
 
 .section-recarga {
