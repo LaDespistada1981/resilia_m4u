@@ -1,3 +1,5 @@
+const con = require('../infra/bd-mysql');
+
 module.exports = class usersDAO{
 
     constructor(bd){
@@ -7,8 +9,12 @@ module.exports = class usersDAO{
     showUsers(){
         return new Promise ((resolve, reject) =>
         {
-            this.bd.all("SELECT * FROM USERS", (error, rows) =>{
-                if (error) reject("Erro ao listar usuários")
+            // this.bd.all("SELECT * FROM USERS", (error, rows) =>{
+            //     if (error) reject("Erro ao listar usuários")
+            //     else resolve(rows)
+            // })
+            con.query('SELECT * FROM book', (err, rows)=>{
+                if(err) reject(err)
                 else resolve(rows)
             })
         })

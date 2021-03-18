@@ -16,9 +16,9 @@ module.exports = (app, bd) => {
   
 
   //Register
-  app.get('/user/register/:id', async (req, resp) => 
+  app.get('/user', async (req, resp) => 
   {
-
+    uDAO.showUsers().then(rows => resp.send(rows))
   })
   
   app.post('/user/register', (req, resp)=>{
