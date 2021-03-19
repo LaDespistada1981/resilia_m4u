@@ -1,0 +1,71 @@
+.container-cadastro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "title picture" "cadastro picture";
+  width: 100vw;
+  padding: 20px 80px 40px;
+  height: calc(100vh - 140px);
+  align-content: center;
+}
+
+h1 {
+  grid-area: title;
+}
+
+.form {
+  grid-area: cadastro;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.form input {
+  width: 30vw;
+  height: 30px;
+  padding: 5px;
+}
+
+.checkbox {
+  width: 40%;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.checkbox input {
+  height: 20px;
+  border-radius: 5px;
+}
+
+.checkbox label {
+  margin-right: 200px;
+}
+
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-cadastro input {
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.picture {
+  width: 10%;
+  grid-area: picture;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
