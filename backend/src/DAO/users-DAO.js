@@ -13,7 +13,7 @@ module.exports = class usersDAO{
             //     if (error) reject("Erro ao listar usuários")
             //     else resolve(rows)
             // })
-            con.query('SELECT * FROM book', (err, rows)=>{
+            con.query('SELECT * FROM USERS', (err, rows)=>{
                 if(err) reject(err)
                 else resolve(rows)
             })
@@ -32,13 +32,14 @@ module.exports = class usersDAO{
         ))
     }
 
-    createUser(name, email, cpf, phone, user_id){
-        return ( new Promise((resolve, reject) =>{
-            this.bd.run(`INSERT INTO USERS (NAME, EMAIL, CPF, PHONE, USER_ID) VALUES (?,?,?,?,?)`, [name, email, cpf, phone, user_id], (error) =>{
-                if (error) reject (error +". Please try again.") 
-                else resolve ("Register completed successfully!")})
+    createUser(usuario){
+        return new Promise((resolve, reject) =>{
+            this.bd.run(`INSERT INTO USERS (FULLNAME, EMAIL, CPF, CNPJ, PASSWORD) VALUES (?,?,?,?,?)`, usuario, (error, rows) =>{
+                if (error){ reject (error +". Please try again.") }
+                else {resolve (rows)}
             })
-        )
+            })
+
     }
 
 }
