@@ -4,34 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
     <title>FOne</title>
 </head>
 <body>
-    <header class="navbar">
-        
-        <section class="navbar-left">
-            <img  class="nav-logo" src="./src/img/logo-header.svg" alt="logomarca FOne">
-        </section>
-        <section class="navbar-section">
-            <a href="./src/pages/login.html" class=" btn-link txt-color-white">chip</a>
-            <a href="./src/pages/login.html" class=" btn-link txt-color-white">recarga</a>
-            <a href="./src/pages/login.html" class=" btn-link txt-color-white">login</a>
-            <a href="./src/pages/cadastro.html" class=" btn-link txt-color-white">cadastre-se</a>
-        </section>
-    </header>
+    <header>
+        <div class="logo">
+          <a href="./index.html"><img src="./src/img/logo-header.svg" alt="logo header" /></a>
+        </div>
+        <ul class="ul-header">
+            <a href="./src/pages/chip.html"><li>chip</li></a>
+            <a href="./src/pages/recarga.html"><li>recarga</li></a>
+            <a href="./src/pages/login.html"><li>login</li></a>
+            <a href="./src/pages/cadastro.html"><li>cadastre-se</li></a>
+        </ul>
+      </header>
 
     <main></main>
 
     <footer>
-        <p>Todos os direitos reservados - Copyright 2021</p>
+        <a href="./src/pages/somos.html" class="bold">Quem somos</a>
+        <p>Todos os direitos reservados - Copyrigth 2021</p>
+        <img src="./src/img/logo-footer.svg" alt="logo FOne" />
     </footer>
 </body>
 </html>
