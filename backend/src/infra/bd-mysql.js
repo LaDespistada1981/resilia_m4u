@@ -22,8 +22,9 @@ con.connect((err) => {
 //     }
 //     console.log('The connection was finish...')
 // })
+
 process.on('SIGINT', () =>
-	db.close(() => {
+	con.close(() => {
 		console.log('DB finished');
 		process.exit(0);
 	})
