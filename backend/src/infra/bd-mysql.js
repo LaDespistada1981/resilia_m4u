@@ -23,11 +23,11 @@ con.connect((err) => {
 //     console.log('The connection was finish...')
 // })
 
-process.on('SIGINT', () =>
-	con.close(() => {
-		console.log('DB finished');
-		process.exit(0);
-	})
-);
+// process.on('SIGINT', () =>
+// 	con.close(() => {
+// 		console.log('DB finished');
+// 		process.exit(0);
+// 	})
+// );
 
 module.exports = con;
