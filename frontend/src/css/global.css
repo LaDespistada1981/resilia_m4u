@@ -2,17 +2,14 @@
 :root {
   --black: #212121;
   --white: #ffffff;
-  --blueGradiente: linear-gradient(
-    45deg,
-    rgba(34, 58, 141, 1) 0%,
-    rgba(76, 99, 247, 1) 100%
-  );
-  --blueButton: #4c63f7;
-  --modalBg: #3b53cc 35%;
-  --greyDisable: #bec6dd;
-  --middleLanding: #233b8f 15%;
-  --fontGeral: "Jost", sans-serif;
-  --fontLabelForm: "Poppins", sans-serif;
+  --blue-gradiente: -webkit-linear-gradient(#223a8d, #4c63f7);
+  --blue-button: #4c63f7;
+  --modal-bg: #afb8e2;
+  --blue-disable: #bec6dd;
+  --border-form: #afb8e2;
+  --middle-landing: #233b8f 15%;
+  --font-geral: "Jost", sans-serif;
+  --font-form: "Poppins", sans-serif;
 }
 
 * {
@@ -21,7 +18,110 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: var(--fontGeral);
+/* Configurações do header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 1px;
+  width: 80%;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: var(--white);
 }
 
+.logo {
+  width: 7.3rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.ul-header {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1440px;
+  width: 100%;
+  align-items: center;
+  list-style: none;
+  font-size: 26px;
+  font-family: "Jost", sans-serif;
+  background: var(--blue-gradiente);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.ul-header li {
+  margin-left: 40px;
+}
+
+/* Configurações da main */
+
+main {
+  background-color: var(--white);
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Configurações do footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  padding: 30px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: var(--blue-gradiente);
+  height: 60px;
+  font-family: var(--font-geral);
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-geral);
+  font-weight: 700;
+  font-size: 32px;
+}
+
+p {
+  font-family: var(--font-geral);
+  font-weight: 400;
+}
+
+label {
+  font-family: var(--font-form);
+}
+
+input {
+  font-family: var(--font-form);
+  height: 30px;
+  border: 1px solid var(--border-form);
+}
+
+select {
+  height: 30px;
+  border: 1px solid var(--border-form);
+  font-family: var(--font-form);
+}

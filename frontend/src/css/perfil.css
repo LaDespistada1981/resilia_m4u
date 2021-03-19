@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #AFB8E2;
+  background-color: var(--modal-bg);
   border-radius: 30px;
   padding: 40px;
 }
@@ -25,27 +25,24 @@
   align-items: center;
 }
 
-.section-historico input,.section-historico select {
-    width: 100%;
-    height: 30px;
-    border: 1px solid #8D98B4;
+.section-historico input,
+.section-historico select {
+  width: 100%;
+  height: 30px;
+  border: 1px solid var(--border-form);
 }
 
 .section-historico button {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .cartoes {
-    margin-top: 100px;;
+  margin-top: 100px;
 }
 
 .cartoes select {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
-
-
-
 
 .section-solicitacao {
   grid-area: solicitacao;
@@ -54,5 +51,22 @@
 }
 
 .section-recarga {
+  justify-content: space-around;
+  background-color: var(--modal-bg);
   grid-area: recarga;
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.section-recarga select,
+input {
+  width: 100px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.linha1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
