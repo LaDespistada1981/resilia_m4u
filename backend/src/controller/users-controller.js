@@ -16,13 +16,32 @@ module.exports = (app, bd) => {
   
 
   //Register
-  app.get('/user/register/:id', async (req, resp) => 
+  app.get('/user', async (req, resp) => 
   {
+    uDAO.showUsers().then(rows => resp.send(rows))
+  })
 
+  app.get('/user/:EMAIL', async (req, resp)=>{
+    try{
+      const userEmail = await uDAO.getUserByEmail([req.params.EMAIL])
+    
+      resp.send(userEmail)
+    }
+    catch(error){
+      resp.send(error)
+    }
   })
   
-  app.post('/user/register', (req, resp)=>{
-    resp.send(req.body.name, req.body.cpf, req.body.phone)
+  app.post('/user/register', async (req, resp)=>{
+    try{
+     const addUser = await uDAO.createUser([req.body.fullname, req.body.email, req.body.cpf, req.body.cnpj, req.body.password]);
+
+     resp.send(`Usuário ${req.body.fullname} inserido com sucesso!`)
+    }
+    catch(error){
+      resp.send(error);
+    }
+
   })
   
   app.put('/user/register/:id', (req, resp)=>{
