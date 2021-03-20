@@ -21,9 +21,9 @@ module.exports = class usersDAO{
     }
 
 
-    getUserByEmailInDB(email){
+    getUserByEmail(email){
         return (new Promise((resolve, reject) => {
-            this.bd.all(`SELECT * FROM user WHERE email = ?`, [email], (err, rows) =>{
+            con.query('SELECT * FROM USERS WHERE EMAIL = ?', email, (err, rows) =>{
                 if(err) reject(err)
                 else resolve(rows)  
             })
@@ -33,8 +33,9 @@ module.exports = class usersDAO{
     }
 
     createUser(usuario){
+    
         return new Promise((resolve, reject) =>{
-            this.bd.run(`INSERT INTO USERS (FULLNAME, EMAIL, CPF, CNPJ, PASSWORD) VALUES (?,?,?,?,?)`, usuario, (error, rows) =>{
+            con.query(`INSERT INTO USERS (FULLNAME, EMAIL, CPF, CNPJ, PASSWORD) VALUES (?,?,?,?,?)`, usuario, (error, rows) =>{
                 if (error){ reject (error +". Please try again.") }
                 else {resolve (rows)}
             })
