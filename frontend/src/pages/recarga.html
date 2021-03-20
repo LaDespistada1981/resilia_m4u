@@ -11,6 +11,8 @@
   <title>Perfil - Recarga</title>
 </head>
 <body>
+  
+  <!-- Menu de navegação -->
   <header>
     <div class="logo">
       <a href="../../index.html"><img src="../img/logo-header.svg" alt="logo header" /></a>
@@ -22,107 +24,126 @@
     </ul>
   </header>
   
+  <!-- Corpo da Página de Perfil -->
   <main>
     <div class="container-perfil">
+
+      <!-- Barra lateral -->
       <section class="section-historico">
+
+        <!-- Histórico de compras -->
         <div class="historico">
-          <h1>Histórico de Compras</h1>
+          <h2 class="titulo">Histórico de Compras</h2>
           <input type="date" name="data" id="">
           <br>
           <select name="produto" id="">
             <option value="selecione" disabled selected="selecione">Selecione seu produto</option>
             <option value="recarga">Recarga</option>
             <option value="chip">Chip</option>
-          </select>
-          <button>Filtrar</button>
+          </select><br>
+          <button class="btn-linha4">Filtrar</button>
         </div>
+
+        <!-- Cartões cadastrados -->
         <div class="cartoes">
-          <h1>Cartões Cadastrados</h1>
+          <h2 class="titulo">Cartões Cadastrados</h2>
           <select name="cadastrados" id="">
             <option value="selecione-cartao" disabled selected="selecione-cartao">Cartões</option>
             <option value="cartao1">35XX XXXX XXXX XX14 </option>
             <option value="cartao2">27XX XXXX XXXX XX18 </option>
           </select>
-          
         </div>
       </section>
+      
+      <!-- Solicitação de produtos -->
       <section class="section-solicitacao">
-        <p>Olá, <strong>Fulano</strong></p>
-        <button class="btn">Quero Recarga</button>
-        <p>O que você deseja fazer?</p>
-        <button class="btn">Quero meu Chip</button>
+        <div class="quero-recarga">
+          <p>Olá, <strong>Fulano</strong></p>
+          <button class="btn">Quero Recarga</button>
+        </div>
+        <div class="quero-chip">
+          <p>O que você deseja fazer?</p>
+          <button class="btn">Quero meu Chip</button>
+        </div>
       </section>
-
+      
+      <!-- Seção de Recarga -->
       <section class="section-recarga">
-        <div class="linha1">
-          <select name="operadora" id="">
+        <div class="oper">
+          <select  class="operadora" name="operadora" id="selecione">
             <option value="operadora" disabled selected="operadora">Operadora</option>
             <option value="recarga">Oi</option>
             <option value="chip">Tim</option>
             <option value="recarga">Claro</option>
             <option value="chip">Vivo</option>
           </select>
-          <div>
-            <label for="ddd">DDD</label>
-            <select name="estados-brasil" id="ddd">
-              <option value="uf" disabled selected="uf">UF</option>
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
-            </select>
-          </div>
-          <div>
-            <label for="telefone">Nº Celular</label>
-            <input placeholder="XXXXX-XXXX" type="text" name="" id="telefone">
-          </div>
-          <img src="../img/logo-perfil.svg" alt="logo">
         </div>
-        <button>15</button>
-        <button>25</button>
-        <button>35</button>
-        <button>50</button>
-        <button>20</button>
-        <button>30</button>
-        <button>40</button>
-        
+
+        <!-- Seção DDD -->
+        <div class="ddd">
+          <label for="ddd">DDD</label><br>
+          <select name="estados-brasil" id="ddd">
+            <option value="uf" disabled selected="uf">UF</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+
+        <!-- Seção celular -->
         <div>
-          <h3>Outros valores</h3>
-          <label for="valorRecarga">Recarga</label>
-          <input type="text" name="" id="valorRecarga">
+          <label for="telefone">Nº Celular</label><br>
+          <input placeholder="XXXXX-XXXX" type="text" name="" id="telefone">
         </div>
+
+
+        <!-- Logomarca -->
+        <img src="../img/logo-perfil.svg" alt="logo">
         
-        <p>R$ XX</p>
-        <button class="btn">Pagar</button>
-        <button class="btn">Fechar</button>
-        
+        <button class="btn-padrao">15</button>
+        <button class="btn-padrao">25</button>
+        <button class="btn-padrao">35</button>
+        <button class="btn-col4">50</button>
+        <button class="btn-padrao">20</button>
+        <button class="btn-padrao">30</button>
+        <button class="btn-padrao">40</button>
+
+        <div class="valores">
+          <p><strong>Outros valores:</strong></p>
+          <input class="col4" type="text" name="" id="valorRecarga">
+        </div>
+        <p class="total"><strong>Valor Total: </strong><br> R$ XX,xx</p>
+        <button class="btn-linha4">Pagar</button>
+        <button class="btn-linha4">Fechar</button>
       </section>
     </div>
   </main>
   
+  <!-- Rodapé -->
   <footer>
     <a href="./somos.html" class="bold">Quem somos</a>
     <p>Todos os direitos reservados - Copyrigth 2021</p>
