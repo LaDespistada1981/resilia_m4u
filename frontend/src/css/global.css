@@ -2,6 +2,7 @@
 :root {
   --black: #212121;
   --white: #ffffff;
+  --blue-txt: #273f9a;
   --blue-gradiente: -webkit-linear-gradient(#223a8d, #4c63f7);
   --blue-button: #4c63f7;
   --modal-bg: #afb8e2;
@@ -124,4 +125,10 @@ select {
   height: 30px;
   border: 1px solid var(--border-form);
   font-family: var(--font-form);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 11px 1px rgba(207, 206, 224, 0.65);
 }
