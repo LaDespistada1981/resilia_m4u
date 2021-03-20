@@ -1,24 +1,13 @@
-const mysql = require('mysql2');
+const sqlite3 = require('sqlite3').verbose();
+const bd = new sqlite3.Database('./src/infra/database.db');
 
-const con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'fone'
-});
 
-con.connect((err) => {
-    if (err) {
-        console.log('Erro connecting to database...', err)
-        return
-    }
-    console.log('Connection established!')
-})
+//Processamento de sinal
+process.on('SIGINT', () =>
+    bd.close(() => {
+        console.log('BD encerrado!');
+        process.exit(0);
+    })
+);
 
-con.end((err) => {
-    if(err) {
-        console.log('Erro to finish connection...', err)
-        return 
-    }
-    console.log('The connection was finish...')
-})
+module.exports = bd;
