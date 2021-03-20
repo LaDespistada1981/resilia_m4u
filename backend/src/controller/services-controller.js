@@ -11,8 +11,13 @@ app.post("/services/recharge", (req, resp) => {
 });
 
 //Compra
-app.post("/services/buy", (req, resp) => {
-  console.log("Vai um chip aí, filha?");
+app.post("/services/buy", async (req, resp) => {
+  try{
+    const addChip = await sDAO.generateChip([req.body.msisdn, req.body.company, req.body.id_user]);
+    resp.send(`Chip successfully generated!`)
+   }
+   catch(error){
+     resp.send(error);
+   }
 })
-
 }
