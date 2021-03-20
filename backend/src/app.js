@@ -21,3 +21,9 @@ app.get('/', (req,resp) =>{
 const userController = require('./controller/users-controller')
 userController(app)
 
+const serviceController = require('./controller/services-controller')
+serviceController(app)
+
+const creditCardsController = require('./controller/creditcards-controller')
+creditCardsController(app) 
+
