@@ -15,13 +15,19 @@ app.post('/creditcards/register', async (req, resp)=>{
 
 })
 
-  app.get("/creditcards", (req, resp) =>{
-    resp.send(creditCards)
-  })
+  app.get("/creditcards",async (req, resp) => {
+                try{
+                    const cardsData = await cDAO.creditCardsDatabase();
+                    resp.status(200).send(cardsData);
+                }
+                catch(error){
+                    resp.send(error);
+                }
+        })
   
-  app.get('/creditcards/:user_id', async (req, resp)=>{
+  app.get('/creditcards/:ID_USER', async (req, resp)=>{
       try{
-          const userCards = await cDAO.cardsPerUser(req.params.card);
+          const userCards = await cDAO.cardsPerUser(req.params.ID_USER);
           resp.status(200).send(userCards)
         }
       catch(error){
