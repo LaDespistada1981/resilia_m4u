@@ -1,12 +1,14 @@
+
 .container-perfil {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  grid-template-rows: 1fr 2.5fr;
+  grid-template-rows: 1fr 3fr;
   grid-template-areas: "historico solicitacao" "historico recarga";
-  width: 100vw;
+  width: 98.7vw;
   padding: 20px 80px 40px;
-  height: calc(100vh - 6.25rem);
+  height: auto;
   gap: 1.5rem 3.125rem;
+  
 }
 
 .historico .titulo {
@@ -117,7 +119,7 @@
 .section-recarga select,
 input {
   font-family: var(--font-form);
-  width: 6.25rem;
+  width: 80%;
   border-radius: 0.25rem;
   text-align: center;
   height: 3.25rem;
@@ -183,4 +185,7 @@ input {
 footer {
   display: flex;
   bottom: 0;
+  left: 0;
+  width: 100%;
+
 }
