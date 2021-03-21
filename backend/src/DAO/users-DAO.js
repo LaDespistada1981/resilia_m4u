@@ -12,9 +12,9 @@ module.exports = class usersDAO{
             con.query('SELECT * FROM USERS', (err, rows)=>{
                 if(err) reject(err)
                 else resolve(rows)
-            })
-        })
-    }
+            });
+        });
+    };
 
 
     getUserByEmail(email){
@@ -22,20 +22,46 @@ module.exports = class usersDAO{
             con.query('SELECT * FROM USERS WHERE EMAIL = ?', email, (err, rows) =>{
                 if(err) reject(err)
                 else resolve(rows)  
-            })
-        }
-                
-        ))
-    }
+            });
+        }));
+    };
 
     createUser(usuario){
         return new Promise((resolve, reject) =>{
             con.query(`INSERT INTO USERS (FULLNAME, EMAIL, CPF, CNPJ, PASSWORD) VALUES (?,?,?,?,?)`, usuario, (error, rows) =>{
-                if (error){ reject (error +". Please try again.") }
-                else {resolve (rows)}
-            })
-            })
+                if (error){
+                    reject (error +". Please try again.")
+                }else {
+                    resolve (rows)
+                }
+            });
+            });
+    };
 
+    updateUser(usuario){
+        return new Promise((resolve, reject)=>{
+            let queryUpdate = "UPDATE USERS SET FULLNAME=? WHERE EMAIL=?"
+            con.query(queryUpdate, usuario, (error, rows)=>{
+                if(error){
+                    reject(error)
+                }else{
+                    resolve(rows)
+                }
+
+            })
+        })
     }
 
-}
+    delUser(usuario){
+        return new Promise((resolve, reject)=>{
+            con.query('DELETE FROM USERS WHERE EMAIL=?', usuario, (error, rows)=>{
+                if(error){
+                    reject(error)
+                }else{
+                    resolve(rows)
+                }
+            })
+        })
+    }
+
+};
