@@ -44,12 +44,23 @@ module.exports = (app, bd) => {
 
   })
   
-  app.put('/user/register/:id', (req, resp)=>{
-    console.log("Oi, eu sou o put do cadastro")
+  app.put('/user/:EMAIL', async (req, resp)=>{
+    let paramUpdate = [req.body.fullname, req.params.EMAIL]
+    try{
+      const updtUser = await uDAO.updateUser(paramUpdate);
+      resp.send(updtUser);
+    }catch(error){
+      resp.send(error);
+    }
   })
   
-  app.delete('/user/register/:id', (req, resp)=>{
-    console.log("Oi, eu sou o delete do cadastro")
+  app.delete('/user/:EMAIL', async (req, resp)=>{
+    try{
+      const deleteUser = await uDAO.delUser(req.params.EMAIL);
+      resp.send(`Usuário ${req.params.EMAIL} deletado com sucesso.`)
+    }catch(error){
+      resp.send(error);
+    }
   })
 
 }  
