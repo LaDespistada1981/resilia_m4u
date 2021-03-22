@@ -25,11 +25,20 @@ module.exports = class creditCardsDAO{
 }
 
     cardsPerUser(card){
-        return new Promise ( (resolve,reject) =>{
-            con.query('SELECT * FROM CARDS WHERE USER_ID = ?', [card], (error,row) =>{
+        return new Promise ((resolve,reject) =>{
+            con.query('SELECT * FROM CARDS WHERE ID_USER = ?', [card], (error,rows) =>{
             if (error) reject ("Something went wrong. Please try again.")
-            else resolve (row)
+            else resolve (rows)
             })   
+    })
+    }
+
+    creditCardsDatabase(){
+        return new Promise ((resolve,reject) =>{
+            con.query("SELECT * FROM CARDS", (error, rows) =>{
+            if (error) reject ("Somethins went wrong. Please try again.")
+            else resolve (rows)
+            })
     })
     }
 
