@@ -1,4 +1,6 @@
 
+
+
 .container-perfil {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
@@ -8,6 +10,7 @@
   padding: 20px 80px 40px;
   height: auto;
   gap: 1.5rem 3.125rem;
+
   
 }
 
@@ -110,6 +113,7 @@
   padding: 3.125rem;
   gap: 3.125rem;
   box-shadow: 2px 1px 5px 0px rgba(131, 128, 201, 0.57);
+  
 }
 
 .oper {
