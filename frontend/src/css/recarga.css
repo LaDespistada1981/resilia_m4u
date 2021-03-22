@@ -1,11 +1,13 @@
+
+
 .container-perfil {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1.5fr 3fr;
   grid-template-rows: 1fr 2.5fr;
   grid-template-areas: "historico solicitacao" "historico recarga";
-  width: 100vw;
+  width: 100%;
   padding: 20px 80px 40px;
-  height: calc(100vh - 6.25rem);
+  height: auto;
   gap: 1.5rem 3.125rem;
 }
 
@@ -195,4 +197,6 @@ select {
 footer {
   display: flex;
   bottom: 0;
+  position: relative;
+  width: 100%;
 }

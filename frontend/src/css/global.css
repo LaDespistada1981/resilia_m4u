@@ -65,9 +65,6 @@ header {
 
 main {
   background-color: var(--white);
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 /* Configurações do footer */
