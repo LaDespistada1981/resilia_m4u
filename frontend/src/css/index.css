@@ -1,0 +1,68 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    "linha1"
+    "linha2"
+    "linha3";
+}
+
+.introducao {
+  display: grid;
+  grid-area: linha1;
+  grid-template-areas: "texto1  imagem1";
+  width: 100vw;
+  height: 450px;
+  justify-content: space-around;
+  grid-template-columns: 1fr 1fr;
+}
+
+.introducao .text-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.introducao p {
+  grid-area: texto1;
+  font-family: var(--font-geral);
+  font-weight: 400;
+  font-size: 36px;
+  padding: 50px 100px;
+  height: 400px;
+}
+
+.introducao picture {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.introducao img {
+  grid-area: imagem1;
+  grid-area: imagem1;
+  width: 60%;
+  align-self: center;
+  justify-items: center;
+  margin: 10px auto;
+}
+
+.middle-page {
+  width: 100vw;
+  display: grid;
+  grid-area: linha2;
+  grid-template-areas:
+    "box1"
+    "box2"
+    "box3";
+}
+
+.middle-page .box1 {
+  background-color: chartreuse;
+  width: 80%;
+  height: 400px;
+  gap: 20px;
+}
