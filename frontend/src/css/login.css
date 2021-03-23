@@ -1,11 +1,18 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .modal {
   font-family: var(--font-geral);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   position: relative;
   background-color: var(--modal-bg);
-  width: 800px;
-  height: 600px;
+  width: 60vw;
+  height: 70vh;
   border-radius: 30px;
 }
 
@@ -20,8 +27,8 @@
 }
 
 .content input {
-  width: 500px;
-  height: 40px;
+  width: 100%;
+  height: ;
   margin-bottom: 20px;
 }
 
@@ -31,15 +38,19 @@
 }
 
 .btn-log {
-  width: 9.375rem;
-  height: 3.25rem;
+  width: 6.375rem;
+  height: 2rem;
   font-size: 1.5rem;
   background-color: var(--blue-button);
   color: var(--white);
   border-radius: 1.625rem;
 }
 
-.form-switch strong {
+.form {
+  display: flex;
+  justify-content: space-around;
+}
+.form strong {
   color: var(--blue-txt);
 }
 
@@ -50,8 +61,8 @@
 }
 
 .btn-fechar {
-  width: 9.375rem;
-  height: 3.25rem;
+  width: 6.375rem;
+  height: 1.75rem;
   font-size: 1.5rem;
   background-color: var(--blue-button);
   color: var(--white);
