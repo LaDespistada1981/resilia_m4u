@@ -42,16 +42,24 @@ app.get('/services/sale', async (req, resp)=>{
   }});
 
 //Histórico de Compras Usuário
-app.get('/services/:USER_ID', async (req, resp)=>{
+app.get('/services/:ID_USER', async (req, resp)=>{
   try{
-    const userEmail = await uDAO.getUserByEmail([req.params.ID_USER])
-  
-    resp.send(userEmail)
+    const purchaseHistory = await uDAO.getHistoryByUser([req.params.ID_USER])
+    resp.send(purchaseHistory)
   }
   catch(error){
     resp.send(error)
   }
-})
+});
+
+app.delete('/services/:ID_USER', async(req, resp)=>{
+  try{
+    const delHistory = await uDAO.delHistoryById([req.params.ID_USER])
+  }
+  catch(error){
+    resp.send(error)
+  }
+});
 
 
 }
