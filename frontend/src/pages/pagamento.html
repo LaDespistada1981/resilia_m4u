@@ -26,36 +26,43 @@
     
     <main>
         <section class="modal">
-            <div class="modal active" id="modal-id">
-                <a href="#close" class="modal-overlay" aria-label="Close"></a>
-                <div class="modal-container">
-                    <div class="modal-header">
-                        <a href="#close" class="btn btn-clear float-center" aria-label="Close"></a>
-                        <img src="../img/logo-login-pgto.svg" alt="Logo FOne">
-                        <div class="modal-title h5">Pagamento</div>
+            
+            <!-- <a href="#close" class="modal-overlay" aria-label="Close"></a> -->
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a href="#close" class="btn btn-clear float-center" aria-label="Close"></a>
+                    <img src="../img/logo-login-pgto.svg" alt="Logo FOne">
+                    <div class="modal-title h5">Pagamento</div>
+                </div>
+                
+                <div section="modal-body">
+                    <div class="content">
+                        <input class="pag" type="text" name="" id="nome" placeholder="  Nome">
+                        <input class="pag" type="text" name="" id="nomeImpresso" placeholder="  Nome impresso no cartão">
                     </div>
-                    
-                    <div section="modal-body">
-                        <!-- conteúdo do formulário de login -->
-                        <div class="content">
-                            <input class="pagamento" type="text" name="" id="numCartao" placeholder="  Número do cartão">
-                            <input class="pagamento" type="text" name="" id="nome" placeholder="  Nome">
-                        </div>
-                        <div class="divider">
-                            <input class="column" type="text" name="" id="validade" placeholder="  Validade">
-                            <input class="column" type="text" name="" id="cvv" placeholder="  CVV">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-switch">
-                                <input type="checkbox" id = "cadastra">
-                                <i class="form-icon"></i>
-                                <strong>Cadastrar cartão</strong>
-                            </label>
-                            <button class="btn-pag"type="submit">Enviar</button>
-                        </div>
+
+                    <div class="div-content">
+                        <select name="produto" id="">
+                            <option value="selecione" disabled selected="selecione">Selecione bandeira</option>
+                            <option value="master">Master</option>
+                            <option value="visa">Visa</option>
+                            <option value="elo">Elo</option>
+                        </select><br>
+                        <input class="column" type="text" name="" id="numCartao" placeholder="  Número do cartão">
+                        <input class="column" type="text" name="" id="validade" placeholder="  Validade">
+                        <input class="column" type="text" name="" id="cvv" placeholder="  CVV">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-switch">
+                            <input type="checkbox" id = "cadastra">
+                            <i class="form-icon"></i>
+                            <strong>Cadastrar cartão</strong>
+                        </label>
+                        <button class="btn-pag"type="submit">Enviar</button>
                     </div>
                 </div>
             </div>
+            
         </section>
     </main>
     
