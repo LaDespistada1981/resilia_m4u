@@ -26,6 +26,16 @@ module.exports = class usersDAO{
         }));
     };
 
+    logUser(email){
+        return (new Promise((resolve, reject)=>{
+            con.query('SELECT * FROM USERS WHERE EMAIL=?', email, (err, rows)=>{
+                if(err){ reject(err)}
+                else{ resolve(rows);
+            }
+        })
+        }))
+    }
+
     createUser(usuario){
         return new Promise((resolve, reject) =>{
             con.query(`INSERT INTO USERS (FULLNAME, EMAIL, CPF, CNPJ, PASSWORD) VALUES (?,?,?,?,?)`, usuario, (error, rows) =>{

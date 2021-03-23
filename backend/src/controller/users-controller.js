@@ -1,6 +1,7 @@
-const { hash } = require('bcrypt')
 const usersDAO = require('../DAO/users-DAO')
 const generateHash = require('../crypto/hashGenerator');
+const bcrypt = require('bcrypt');
+
 
 
 module.exports = (app, bd) => {
@@ -35,14 +36,28 @@ module.exports = (app, bd) => {
   });
 
   //Login
-    app.post('/user/login', async  (req, resp) => {
-      const user = await uDAO.getUserByEmailInDB(req.body.email)
-        if(req.body.password === user.password){
-          resp.send(`You're in`)} 
-        else {
-          resp.send(`Wrong password. Please try again.`)}  
-    })
+  app.post('/user/login', async  (req, resp) => {
+    try{
+      const loginUser = await uDAO.logUser([req.body.email]);
+      if([req.body.email] != loginUser[0].EMAIL){
+        return resp.status(401).send("Usuário incorreto")
+      }else{ 
+        bcrypt.compare(req.body.password, loginUser[0].PASSWORD, (err, result)=>{
+          if(err){
+            resp.status(401).send("Senha incorreta.")
+          }if(result){
+            resp.status(200).send("Autenticação realizada com sucesso.");
+          }else{
+            resp.status(401).send('Usuário ou senha incorretos');
+          }
 
+          })
+      }
+    }catch(error){
+      resp.send(error)
+    }
+
+  });
   
   app.put('/user/:EMAIL', async (req, resp)=>{
     let paramUpdate = [req.body.fullname, req.body.email, req.params.EMAIL]
