@@ -14,6 +14,25 @@ module.exports = class servicesDAO{
                     else {resolve ("Number successfully generated")}
             })
         })
+    };
+    
+    
+    generateSale(sale){
+        return new Promise((resolve, reject)=>{
+            con.query(`INSERT INTO SALES (DATE, PRODUCT, MSISDN, AMOUNT, ID_USER, ID_CARD) VALUES (?, ?, ?, ?, ?, ?)`, sale, (error, rows)=>{
+                if(error) {reject(error)}
+                else {resolve("Sale susccessfully generated")}
+            })
+        })
+    };
+
+    showSales(sales){
+        return new Promise((resolve, reject)=>{
+            con.query('SELECT * FROM SALES', sales, (error, rows)=>{
+                if(error){reject(error)}
+                else{resolve (rows)}
+            })
+        })
     }
 
 
