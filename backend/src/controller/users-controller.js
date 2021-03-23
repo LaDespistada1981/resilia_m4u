@@ -1,21 +1,13 @@
+const { hash } = require('bcrypt')
 const usersDAO = require('../DAO/users-DAO')
+const generateHash = require('../crypto/hashGenerator');
 
 
 module.exports = (app, bd) => {
 
     const uDAO = new usersDAO(bd)
 
-    //Login
-  app.post('/user/login', async  (req, resp) => {
-          const user = await uDAO.getUserByEmailInDB(req.body.email)
-          if(req.body.password === user.password){
-              resp.send(`You're in`)} 
-          else {
-              resp.send(`Wrong password. Please try again.`)}  
-      })
-  
-
-  //Register
+//Mostra todos usuários
   app.get('/user', async (req, resp) => 
   {
     uDAO.showUsers().then(rows => resp.send(rows))
@@ -24,7 +16,6 @@ module.exports = (app, bd) => {
   app.get('/user/:EMAIL', async (req, resp)=>{
     try{
       const userEmail = await uDAO.getUserByEmail([req.params.EMAIL])
-    
       resp.send(userEmail)
     }
     catch(error){
@@ -34,15 +25,24 @@ module.exports = (app, bd) => {
   
   app.post('/user/register', async (req, resp)=>{
     try{
-     const addUser = await uDAO.createUser([req.body.fullname, req.body.email, req.body.cpf, req.body.cnpj, req.body.password]);
-
-     resp.send(`Usuário ${req.body.fullname} inserido com sucesso!`)
+      const pwdCrypto = generateHash(req.body.password);
+      const addUser = await uDAO.createUser([req.body.fullname, req.body.email, req.body.cpf, req.body.cnpj, pwdCrypto]);
+      resp.send(`Usuário ${req.body.fullname} inserido com sucesso!`)
     }
     catch(error){
       resp.send(error);
     }
+  });
 
-  })
+  //Login
+    app.post('/user/login', async  (req, resp) => {
+      const user = await uDAO.getUserByEmailInDB(req.body.email)
+        if(req.body.password === user.password){
+          resp.send(`You're in`)} 
+        else {
+          resp.send(`Wrong password. Please try again.`)}  
+    })
+
   
   app.put('/user/:EMAIL', async (req, resp)=>{
     let paramUpdate = [req.body.fullname, req.body.email, req.params.EMAIL]
