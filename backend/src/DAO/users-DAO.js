@@ -38,16 +38,29 @@ module.exports = class usersDAO{
             });
     };
 
-    updateUser(usuario){
+    updateUser(usrAtualizado){
         return new Promise((resolve, reject)=>{
-            let queryUpdate = "UPDATE USERS SET FULLNAME=? WHERE EMAIL=?"
-            con.query(queryUpdate, usuario, (error, rows)=>{
+            let queryUpdate = "UPDATE USERS SET FULLNAME=?, EMAIL=? WHERE EMAIL=?"
+            con.query(queryUpdate, usrUpdated, (error, rows)=>{
                 if(error){
                     reject(error)
                 }else{
                     resolve(rows)
                 }
+            })
+        })
+    };
 
+    //Recuperação de Senha
+
+    updatePwd(password){
+        return new Promise((resolve, reject)=>{
+            con.query('UPDATE USERS SET PASSWORD=? WHERE EMAIL=?', password, (error, rows)=>{
+                if(error){
+                    reject(error)
+                }else{
+                    resolve(rows)
+                }
             })
         })
     }

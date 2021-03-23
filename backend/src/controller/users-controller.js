@@ -45,12 +45,21 @@ module.exports = (app, bd) => {
   })
   
   app.put('/user/:EMAIL', async (req, resp)=>{
-    let paramUpdate = [req.body.fullname, req.params.EMAIL]
+    let paramUpdate = [req.body.fullname, req.body.email, req.params.EMAIL]
     try{
       const updtUser = await uDAO.updateUser(paramUpdate);
       resp.send(updtUser);
     }catch(error){
       resp.send(error);
+    }
+  });
+
+  app.put('/user/:EMAIL', async (req, resp)=>{
+    try{
+      const forgotPwd = uDAO.updatePwd([req.body.password, req.params.EMAIL])
+      resp.send(forgotPwd);
+    }catch(error){
+      resp.send(error)
     }
   })
   
