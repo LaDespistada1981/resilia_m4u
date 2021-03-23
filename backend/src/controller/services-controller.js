@@ -55,6 +55,7 @@ app.get('/services/:ID_USER', async (req, resp)=>{
 app.delete('/services/:ID_USER', async(req, resp)=>{
   try{
     const delHistory = await uDAO.delHistoryById([req.params.ID_USER])
+    resp.send(delHistory)
   }
   catch(error){
     resp.send(error)
