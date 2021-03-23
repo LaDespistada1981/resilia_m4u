@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://spectre.min.css">
+    <!--  <link rel="stylesheet" href="http://spectre.min.css"> -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/pagamento.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -35,38 +35,35 @@
                         <div class="modal-title h5">Pagamento</div>
                     </div>
                     
-                    <div class="modal-body">
+                    <div section="modal-body">
                         <!-- conteúdo do formulário de login -->
                         <div class="content">
-                            <input class="pagamento" type="text" name="" id="" placeholder="  Número do cartão">
-                            <input class="pagamento" type="text" name="" id="" placeholder="  Nome">
-                            <div class="divider">
-                                <input class="column" type="text" name="" id="" placeholder="  Validade">
-                                <input class="column" type="text" name="" id="" placeholder="  CVV">
-                            </div>
+                            <input class="pagamento" type="text" name="" id="numCartao" placeholder="  Número do cartão">
+                            <input class="pagamento" type="text" name="" id="nome" placeholder="  Nome">
+                        </div>
+                        <div class="divider">
+                            <input class="column" type="text" name="" id="validade" placeholder="  Validade">
+                            <input class="column" type="text" name="" id="cvv" placeholder="  CVV">
                         </div>
                         <div class="form-group">
                             <label class="form-switch">
-                                <input type="checkbox">
+                                <input type="checkbox" id = "cadastra">
                                 <i class="form-icon"></i>
                                 <strong>Cadastrar cartão</strong>
                             </label>
                             <button class="btn-pag"type="submit">Enviar</button>
                         </div>
                     </div>
-                    
-                    <div class="modal-footer">
-                        <button class="btn-fechar"type="submit">Fechar</button>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
         <a href="./somos.html" class="bold">Quem somos</a>
         <p>Todos os direitos reservados - Copyrigth 2021</p>
         <img src="../img/logo-footer.svg" alt="" />
     </footer>
+    <script src="../js//pagamento.js"></script>
 </body>
 </html>

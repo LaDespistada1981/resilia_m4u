@@ -26,8 +26,8 @@ header {
   align-items: center;
   margin: 0 auto;
   font-size: 1px;
-  width: 80%;
-  height: 80px;
+  width: 80vw;
+  height: 10vh;
   left: 0px;
   top: 0px;
   background: var(--white);
@@ -79,7 +79,7 @@ footer {
   left: 0;
   width: 100vw;
   background: var(--blue-gradiente);
-  height: 60px;
+  height: 5vh;
   font-family: var(--font-geral);
   font-weight: 100;
   z-index: 100;
