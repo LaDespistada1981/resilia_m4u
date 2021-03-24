@@ -76,16 +76,57 @@ main {
 }
 
 @media (max-width: 768px) {
-  .container-perfil {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.8fr 3fr;
-    grid-template-areas: "historico" "solicitacao" "recarga";
+  main {
+    display: flex;
     width: 100%;
-    /* overflow: hidden; */
     height: auto;
-    margin-top: 120px;
   }
-  .section-historico {
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--modal-bg);
     width: 320px;
+    height: auto;
+    border-radius: 30px;
+    margin: 200px auto 100px;
   }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .content input {
+    margin-bottom: 10px;
+  }
+
+  .div-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-content select {
+    width: 100%;
+  }
+
+  .div-content input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .content .pag {
+    width: 100%;
+  }
+}
