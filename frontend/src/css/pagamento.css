@@ -24,7 +24,6 @@ main {
 
 .modal-title {
   font-family: var(--font-geral);
-  font-weight: 700;
   font-size: 24px;
   margin: 10px 0;
   color: var(--blue-txt);
