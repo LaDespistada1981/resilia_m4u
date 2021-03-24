@@ -6,14 +6,14 @@ const password = senha.value;
 
 submit.addEventListener("click", ()=>{
 const pessoa = {
-    EMAIL: emailValue,
-    PASSWORD: password
+    email: emailValue,
+    password: password
 }
 
-    if (pessoa.EMAIL == ""){
+    if (pessoa.email == ""){
         email.placeholder = "Por favor, insira um email"
         email.style.backgroundColor = "#E5E5E5"
-        if (pessoa.PASSWORD == ""){
+        if (pessoa.password == ""){
         senha.placeholder = "Por favor, insira a senha"
         senha.style.backgroundColor = "#E5E5E5"
     }}
@@ -26,27 +26,20 @@ const pessoa = {
 })
 
 
-const requisition =  async (url, pessoa) =>{
+const requisition = (url, pessoa) =>{
 
-    await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-    
-      body: JSON.stringify(pessoa)
-    }) 
-    
-      .then((response) =>  console.log(response) /* {return response} */)
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      })
-    
-    }
-
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(pessoa)
+  }) 
+    .then((response) => console.log(response))
+    .catch((error) => {
+      console.error("Error:", error)
+    })
+  }
 
 
 
