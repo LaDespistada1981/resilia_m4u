@@ -1,10 +1,6 @@
-const con = require('../infra/bd-mysql');
+const con = require('../infra/mysql-connection');
 
 module.exports = class usersDAO{
-
-    constructor(bd){
-        this.bd = bd
-    }
 
     showUsers(){
         return new Promise ((resolve, reject) =>
@@ -26,6 +22,16 @@ module.exports = class usersDAO{
         }));
     };
 
+    logUser(email){
+        return (new Promise((resolve, reject)=>{
+            con.query('SELECT * FROM USERS WHERE EMAIL=?', [email], (err, rows)=>{
+                if(err){ reject(err)}
+                else{ resolve(rows);
+            }
+        })
+        }))
+    }
+
     createUser(usuario){
         return new Promise((resolve, reject) =>{
             con.query(`INSERT INTO USERS (FULLNAME, EMAIL, CPF, CNPJ, PASSWORD) VALUES (?,?,?,?,?)`, usuario, (error, rows) =>{
@@ -38,16 +44,29 @@ module.exports = class usersDAO{
             });
     };
 
-    updateUser(usuario){
+    updateUser(usrUpdated){
         return new Promise((resolve, reject)=>{
-            let queryUpdate = "UPDATE USERS SET FULLNAME=? WHERE EMAIL=?"
-            con.query(queryUpdate, usuario, (error, rows)=>{
+            let queryUpdate = "UPDATE USERS SET FULLNAME=?, EMAIL=? WHERE EMAIL=?"
+            con.query(queryUpdate, usrUpdated, (error, rows)=>{
                 if(error){
                     reject(error)
                 }else{
                     resolve(rows)
                 }
+            })
+        })
+    };
 
+    //Recuperação de Senha
+
+    updatePwd(password){
+        return new Promise((resolve, reject)=>{
+            con.query('UPDATE USERS SET PASSWORD=? WHERE EMAIL=?', password, (error, rows)=>{
+                if(error){
+                    reject(error)
+                }else{
+                    resolve(rows)
+                }
             })
         })
     }

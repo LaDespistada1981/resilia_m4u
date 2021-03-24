@@ -1,14 +1,10 @@
-const con = require('../infra/bd-mysql')
+const con = require('../infra/mysql-connection')
 
 module.exports = class creditCardsDAO{
 
-    constructor (bd){
-        this.bd = bd
-    }
-
     collectCreditCard(card){
         return new Promise((resolve, reject) =>{
-            con.query(`INSERT INTO CARDS (TYPE, BRAND, BLOCK_1, BLOCK_2, BLOCK_3, HOLDER, EXPIRATIONDATE, ID_USER) VALUES (?,?,?,?,?,?,?,?)`, card, (error, rows) =>{
+            con.query(`INSERT INTO CARDS (TYPE, BRAND, NUMBER, HOLDER, EXPIRATIONDATE, ID_USER) VALUES (?,?,?,?,?,?)`, card, (error, rows) =>{
                 if (error) reject (error +". Please try again.")
                 else resolve (rows)
         })
