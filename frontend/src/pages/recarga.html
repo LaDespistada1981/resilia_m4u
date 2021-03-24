@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/recarga.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <script src="../js/main.js" type="text/javascript" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins&display=swap" rel="stylesheet">
+  <title>Perfil - Recarga</title>
+</head>
+<body>
+  
+  <!-- Menu de navegação -->
+  <header>
+    <div class="logo">
+      <a href="../../index.html"><img src="../img/logo-header.svg" alt="logo header" /></a>
+    </div>
+    <ul class="ul-header">
+      <a href="./chip.html"><li>chip</li></a>
+      <a href="./recarga.html"><li>recarga</li></a>
+      <a href="./perfil.html"><li>meu perfil</li></a>
+    </ul>
+  </header>
+  
+  <!-- Corpo da Página de Perfil -->
+  <main>
+    <div class="container-perfil">
+
+      <!-- Barra lateral -->
+      <section class="section-historico">
+
+        <!-- Histórico de compras -->
+        <div class="historico">
+          <h2 class="titulo">Histórico de Compras</h2>
+          <input type="date" name="data" id="">
+          <br>
+          <select name="produto" id="">
+            <option value="selecione" disabled selected="selecione">Selecione seu produto</option>
+            <option value="recarga">Recarga</option>
+            <option value="chip">Chip</option>
+          </select><br>
+          <button class="btn-linha4">Filtrar</button>
+        </div>
+
+        <!-- Cartões cadastrados -->
+        <div class="cartoes">
+          <h2 class="titulo">Cartões Cadastrados</h2>
+          <select name="cadastrados" id="">
+            <option value="selecione-cartao" disabled selected="selecione-cartao">Cartões</option>
+            <option value="cartao1">35XX XXXX XXXX XX14 </option>
+            <option value="cartao2">27XX XXXX XXXX XX18 </option>
+          </select>
+        </div>
+      </section>
+      
+      <!-- Solicitação de produtos -->
+      <section class="section-solicitacao">
+        <div class="quero-recarga">
+          <p>Olá, <strong>Fulano</strong></p>
+          <button class="btn">Quero Recarga</button>
+        </div>
+        <div class="quero-chip">
+          <p>O que você deseja fazer?</p>
+          <button class="btn">Quero meu Chip</button>
+        </div>
+      </section>
+      
+      <!-- Seção de Recarga -->
+      
+      <section class="section-recarga">
+        <div class="oper">
+          <select  class="operadora" name="operadora" id="selecione">
+            <option class = "op" value="operadora" disabled selected="operadora">Operadora</option>
+            <option class = "op"  value="Oi">Oi</option>
+            <option class = "op"  value="Tim">Tim</option>
+            <option class = "op"  value="Claro">Claro</option>
+            <option class = "op"  value="Vivo">Vivo</option>
+          </select>
+        </div>
+
+        <!-- Seleção de  DDD -->
+        <div class="ddd">
+          <select name="estados-brasil" id="UF">
+            <option value="uf" disabled selected="uf">UF</option>
+          </select>
+          <select id = "DDD">
+            <option value="" disabled selected="ddd">DDD</option>
+          </select>
+        </div>
+
+        <!-- Seção celular -->
+        <div>
+          <label for="telefone">Nº Celular</label><br>
+          <input placeholder="XXXXX-XXXX" type="text" name="" id="telefone">
+        </div>
+
+
+        <!-- Logomarca -->
+        <img src="../img/logo-perfil.svg" alt="logo" id="logoOperadora">
+        
+        <button class="btn-padrao" id = '15' value = '15'>15</button>
+        <button class="btn-padrao" id = '25'value = '20'>25</button>
+        <button class="btn-padrao" id = '35' value = '35'>35</button>
+        <button class="btn-col4" id = '50' value = '50'>50</button>
+        <button class="btn-padrao" id = '20' value = '20'>20</button>
+        <button class="btn-padrao" id = '30' value = '30'>30</button>
+        <button class="btn-padrao" id = '40' value = '40'>40</button>
+        <div class="valores">
+          <p><strong>Outros valores: </strong></p>
+          <input class="col4" type="text" name="" id="valorRecarga">
+        </div>
+        <p class="total"><strong>Valor Total: R$</strong></p><p id = "valorNum">XX,xx</p>
+        <button class="btn-linha4" id="pagar">Pagar</button>
+        <button class="btn-linha4">Fechar</button>
+      </section>
+    </div>
+  </main>
+  
+  <!-- Rodapé -->
+  <footer>
+    <a href="./somos.html" class="bold">Quem somos</a>
+    <p>Todos os direitos reservados - Copyrigth 2021</p>
+    <img src="../img/logo-footer.svg" alt="" />
+  </footer>
+
+  <script src='../js/main.js'></script>
+</body>
+</html>

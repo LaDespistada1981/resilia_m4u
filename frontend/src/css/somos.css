@@ -1,0 +1,60 @@
+.somos {
+  width: 100vw;
+  font-family: var(--font-geral);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.somos h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--blue-txt);
+}
+
+.time {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.devas {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .equipe img {
+  width: 50%;
+}
+
+.card h3 {
+  font-size: 14px;
+}
+
+.card h5 {
+  font-size: 12px;
+}
+
+.card .midias {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card .midias a {
+  cursor: pointer;
+}
+
+.card .midias img {
+  width: 25px;
+}

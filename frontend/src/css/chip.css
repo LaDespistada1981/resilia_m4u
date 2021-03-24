@@ -1,0 +1,162 @@
+.container-perfil {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 1fr 2.5fr;
+  grid-template-areas: "historico solicitacao" "historico chip";
+  width: 100%;
+  padding: 20px 80px 40px;
+  height: auto;
+  gap: 1.5rem 3.125rem;
+}
+
+.historico .titulo {
+  font-family: var(--font-geral);
+  font-size: 1.5rem;
+}
+
+.section-historico {
+  grid-area: historico;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--modal-bg);
+  border-radius: 1.875rem;
+  padding: 2rem;
+  box-shadow: 2px 1px 5px 0px rgba(131, 128, 201, 0.57);
+}
+
+.section-historico > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-historico input,
+.section-historico select {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 2px 1px 5px 0px rgba(131, 128, 201, 0.57);
+}
+
+.section-historico button {
+  align-self: flex-end;
+  width: 6.25rem;
+  height: 3.25rem;
+  font-family: var(--font-geral);
+  font-size: 1.5rem;
+  background-color: var(--blue-button);
+  color: var(--white);
+  border-radius: 1rem;
+}
+
+.cartoes {
+  margin-top: 6.25rem;
+}
+
+.cartoes .titulo {
+  font-family: var(--font-geral);
+  font-size: 1.5rem;
+}
+
+.cartoes select {
+  margin-top: 10px;
+  border-radius: 0.25rem;
+}
+
+.section-solicitacao {
+  grid-area: solicitacao;
+  font-family: var(--font-geral);
+  font-weight: initial;
+}
+
+.section-solicitacao .quero-recarga {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-solicitacao .quero-chip {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-solicitacao .btn {
+  background-color: var(--blue-button);
+  color: var(--white);
+  width: 12.5rem;
+  height: 3.125rem;
+  border-radius: 1.563rem;
+  margin-top: 1.563rem;
+  font-family: var(--font-geral);
+  font-size: 1.5rem;
+}
+
+.section-solicitacao p {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.section-operadora {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 2fr 0.2fr;
+  justify-content: space-around;
+  background-color: var(--modal-bg);
+  grid-area: chip;
+  border-radius: 1.875rem;
+  padding: 3.125rem;
+  gap: 3.125rem;
+  box-shadow: 2px 1px 5px 0px rgba(131, 128, 201, 0.57);
+}
+
+.section-operadora input,
+select {
+  font-family: var(--font-form);
+  width: 6.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  height: 3.25rem;
+}
+
+.box-txt {
+  font-family: var(--font-geral);
+  font-size: 24px;
+  display: grid;
+  grid-column: 1/5;
+}
+
+.box-txt p {
+  font-size: 24px;
+}
+
+.box-txt .alerta {
+  font-size: 16px;
+  color: red;
+}
+
+.btn-padrao {
+  color: var(--blue-txt);
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 10px;
+}
+
+.btn-linha4 {
+  width: 6.25rem;
+  height: 3.25rem;
+  font-family: var(--font-geral);
+  font-size: 1.5rem;
+  background-color: var(--blue-button);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+footer {
+  display: flex;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
