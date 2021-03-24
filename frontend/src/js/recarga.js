@@ -4,6 +4,7 @@ var selectionUF = document.getElementById("UF");
 var selectionDDD = document.getElementById("DDD");
 
 
+
 var dddsPorEstado = {
     "AC": ["68"],
     "AL": ["82"],
@@ -47,6 +48,7 @@ var geraUF = () =>{
 selectionUF.addEventListener("click", geraUF())
 
 selectionUF.addEventListener("change", ()=>{
+    selectionDDD.innerHTML = ""
     for (let i = 0; i < keys.length; i++){
         if (selectionUF.value.toString() == keys[i]){
             let valuesPerUF = values[i]

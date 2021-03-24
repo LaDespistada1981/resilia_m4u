@@ -6,7 +6,7 @@ const CNPJ = document.getElementById('cnpj');
 const nome = document.getElementById('nome');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const confirmPassword = document.getElementById('confirmPassword');
+const confirmpassword = document.getElementById('confirmpassword');
 const submit = document.getElementById('submitButton')
 
 //Filtrando pela seleção do tipo de pessoa 
@@ -25,44 +25,61 @@ checkCNPJ.addEventListener("focus", ()=>{
     CPF.value = ""
 })
 
-//Valores dos inputs escritos para jogar no banco
-
-let cpfValue = CPF.value;
-let cnpjValue = CNPJ.value;
-let nomeValue = nome.value;
-let emailValue = email.value;
-let passwordValue = password.value;
-let confirmPasswordValue = confirmPassword.value;
-
 //Permissões do formulário
 
-submit.addEventListener("click", ()=>{
-    if (nomeValue == ""){
-        nome.placeholder = "Por favor, insira um nome"
-        nome.style.backgroundColor = "#E5E5E5"
-    }
+submit.addEventListener("click", ()=>{  
+var pessoa ={
+cpf: CPF.value,
+cnpj: CNPJ.value,
+fullname: nome.value,
+email: email.value,
+password: password.value}
 
-    if (emailValue == ""){
+console.log(pessoa)
+
+if (pessoa.fullname == ""){
+    nome.placeholder = "Por favor, insira um nome"
+    nome.style.backgroundColor = "#E5E5E5"
+        if (pessoa.email == ""){
         email.placeholder = "Por favor, insira um email"
         email.style.backgroundColor = "#E5E5E5"
-    }
+        if (pessoa.password == ""){
+            password.placeholder = "Por favor, insira uma senha"
+            password.style.backgroundColor = "#E5E5E5"
+                if (confirmpassword.value== ""){
+                confirmpassword.placeholder = "Por favor, confirme sua senha"
+                confirmpassword.style.backgroundColor = "#E5E5E5"
+                    if (pessoa.password !== password){
+                    confirmpassword.placeholder = "Senhas não compatíveis"
+                    confirmpassword.style.backgroundColor = "#E5E5E5"
+}}}}
 
-    if (passwordValue == ""){
-        password.placeholder = "Por favor, insira uma senha"
-        password.style.backgroundColor = "#E5E5E5"
-    }
+}
 
-    if (confirmPasswordValue == ""){
-        confirmPassword.placeholder = "Por favor, confirme sua senha"
-        confirmPassword.style.backgroundColor = "#E5E5E5"
-    }
-
-    if (passwordValue !== password){
-        confirmPassword.placeholder = "Senhas não compatíveis"
-        confirmPassword.style.backgroundColor = "#E5E5E5"
-    }
+else{
+requisition("http://immense-plains-98224.herokuapp.com/user/login", pessoa)}
+console.log("Oi")
+document.querySelector('.container-cadastro').innerHTML = `<h3>Tudo certo com o seu cadastro!</h3><br><h4>Para seguir com o processo de compra, faça seu login :)</h4>` 
 })
 
+
+//Cadastrar
+
+const requisition = (url, pessoa) =>{
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(pessoa)
+    }) 
+      .then((response) => console.log(response /* {return response} */))
+      .catch((error) => {
+        console.error("Error:", error)
+      })
+    }
+    
 
 
 
