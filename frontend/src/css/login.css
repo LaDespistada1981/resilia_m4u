@@ -9,7 +9,6 @@ main {
   font-family: var(--font-geral);
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  position: relative;
   background-color: var(--modal-bg);
   width: 60vw;
   height: 70vh;
@@ -67,4 +66,40 @@ main {
   background-color: var(--blue-button);
   color: var(--white);
   border-radius: 1.625rem;
+}
+
+/* mobile */
+
+@media(max-width: 768px) {
+  .modal {
+    margin-top: 30%;
+    width: 320px;
+    margin-bottom: 50%;
+  }
+
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  .modal-body {
+    width: 100%;
+  }
+
+  .modal-body .content input {
+    width: 100%;
+    padding-left: 8px;
+  }
+
+  .modal-body .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-body .form button:nth-child(2) {
+    margin-bottom: 8px;
+  }
 }
