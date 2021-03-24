@@ -1,60 +1,58 @@
-.somos {
-  width: 100vw;
+main {
+  width: 100%;
+  height: 85vh;
   font-family: var(--font-geral);
+}
+
+.somos {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.somos h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--blue-txt);
+  margin: 0 auto;
+  padding: 80px;
 }
 
 .time {
-  width: 80%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
 }
 
-.devas {
-  display: flex;
-  justify-content: space-around;
+h1 {
+  color: var(--blue-txt);
+  text-align: center;
+  margin: 30px auto 0;
+  font-size: 24px;
 }
 
 .card {
-  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 200px;
+  height: 250px;
+  box-shadow: 2px 1px 5px 0px rgba(131, 128, 201, 0.57);
 }
 
-.card .equipe img {
-  width: 50%;
+.card .equipe {
+  width: 120px;
+  margin-bottom: 10px;
 }
 
 .card h3 {
-  font-size: 14px;
+  font-size: small;
 }
 
 .card h5 {
-  font-size: 12px;
+  font-size: 10px;
 }
 
-.card .midias {
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.card .midias a {
-  cursor: pointer;
-}
-
-.card .midias img {
-  width: 25px;
+.midias img {
+  width: 20px;
+  margin-top: 2px;
 }
