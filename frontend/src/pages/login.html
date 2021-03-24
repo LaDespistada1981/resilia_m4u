@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://spectre.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/responsividade.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins&display=swap" rel="stylesheet">
+    <script src="../js/login.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html"><img src="../img/logo-header.svg" alt="logo header" /></a>
+        </div>
+        <ul class="ul-header">
+            <a href="./chip.html"><li>chip</li></a>
+            <a href="./recarga.html"><li>recarga</li></a>
+            <a href="./login.html"><li>login</li></a>
+            <a href="./cadastro.html"><li>cadastre-se</li></a>
+        </ul>
+    </header>
+    
+    <main>
+        <section class="modal">
+            <div class="modal active" id="modal-id">
+                <a href="#close" class="modal-overlay" aria-label="Close"></a>
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <a href="#close" class="btn btn-clear float-center" aria-label="Close"></a>
+                        <img src="../img/logo-login-pgto.svg" alt="Logo FOne">
+                        <div class="modal-title h5 bold">Login</div>
+                    </div>
+                    
+                    <!-- conteúdo do formulário login -->
+                    <div class="modal-body">
+                        <div class="content">
+                            <input class="login" type="email" name="" id="email" placeholder="  E-mail">
+                            <input class="login" type="text" name="" id="password" placeholder="  Senha">
+                        </div>
+                        <div class="form">
+                            <a class="form" href="../pages/recuperacao.html"><strong>Esqueci minha senha</strong></a>
+                            <button class="btn-log"type="submit" id="submit">Enviar</button>
+                            <button class="btn-log"type="submit">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="./somos.html" class="bold">Quem somos</a>
+        <p>Todos os direitos reservados - Copyrigth 2021</p>
+        <img src="../img/logo-footer.svg" alt="" />
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+main {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  background-color: var(--modal-bg);
+  width: 60vw;
+  height: 60vh;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.modal-container {
+  width: 90%;
+  padding: 5%;
+}
+
+.modal-title {
+  font-family: var(--font-geral);
+  font-size: 24px;
+  margin: 10px 0;
+  color: var(--blue-txt);
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.content .pag {
+  width: 50%;
+}
+
+.div-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-content input {
+  width: 45%;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-group strong {
+  color: var(--blue-txt);
+}
+
+.btn-pag {
+  width: 9.375rem;
+  height: 2.25rem;
+  font-size: 1.5rem;
+  background-color: var(--blue-button);
+  color: var(--white);
+  border-radius: 1.625rem;
+}

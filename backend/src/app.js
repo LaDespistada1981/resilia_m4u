@@ -7,9 +7,6 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
-
-
-
 //Landing page 
 app.get('/', (req,resp) =>{
   console.log('Oi, eu sou a homepage!')

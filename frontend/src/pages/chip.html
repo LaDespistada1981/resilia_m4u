@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/chip.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="../js/comprachip.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins&display=swap" rel="stylesheet">
+    <script src = "../js/comprachip.js" defer></script>
+    <title>Perfil - Chip</title>
+</head>
+<body>
+    
+    <!-- Menu de navegação -->
+    <header>
+        <div class="logo">
+            <a href="../../index.html"><img src="../img/logo-header.svg" alt="logo header" /></a>
+        </div>
+        <ul class="ul-header">
+            <a href="./chip.html"><li>chip</li></a>
+            <a href="./recarga.html"><li>recarga</li></a>
+            <a href="./perfil.html"><li>meu perfil</li></a>
+        </ul>
+    </header>
+    
+    <!-- Corpo da Página de Perfil -->
+    <main>
+        <div class="container-perfil">
+            
+            <!-- Barra lateral -->
+            <section class="section-historico">
+                
+                <!-- Histórico de compras -->
+                <div class="historico">
+                    <h2 class="titulo">Histórico de Compras</h2>
+                    <input type="date" name="data" id="">
+                    <br>
+                    <select name="produto" id="">
+                        <option value="selecione" disabled selected="selecione">Selecione seu produto</option>
+                        <option value="recarga">Recarga</option>
+                        <option value="chip">Chip</option>
+                    </select><br>
+                    <button class="btn-linha4">Filtrar</button>
+                </div>
+                
+                <!-- Cartões cadastrados -->
+                <div class="cartoes">
+                    <h2 class="titulo">Cartões Cadastrados</h2>
+                    <select name="cadastrados" id="">
+                        <option value="selecione-cartao" disabled selected="selecione-cartao">Cartões</option>
+                        <option value="cartao1">35XX XXXX XXXX XX14 </option>
+                        <option value="cartao2">27XX XXXX XXXX XX18 </option>
+                    </select>
+                </div>
+            </section>
+            
+            <!-- Solicitação de produtos -->
+            <section class="section-solicitacao">
+                <div class="quero-recarga">
+                    <p>Olá, <strong>Fulano</strong></p>
+                    <button class="btn">Quero Recarga</button>
+                </div>
+                <div class="quero-chip">
+                    <p>O que você deseja fazer?</p>
+                    <button class="btn">Quero meu Chip</button>
+                </div>
+            </section>
+            
+            <!-- Seção de Recarga -->
+            
+            <section class="section-operadora">
+                <div class="input">
+                    <select  class="operadora" name="operadora" id="selecione" value="operadora">
+                        <option value="operadora" disabled selected="operadora">Operadora</option>
+                        <option class = "op" value="Oi">Oi</option>
+                        <option class = "op"  value="Tim">Tim</option>
+                        <option class = "op"  value="Claro">Claro</option>
+                        <option class = "op"  value="Vivo">Vivo</option>
+                    </select>
+                </div>
+                
+                <!-- Seleção de  UF -->
+                <div class="input">
+                    <select name="estados-brasil" id="uf">
+                        <option value="uf" disabled selected="uf">UF</option>
+                    </select>
+                </div>
+                
+                <!-- Seção celular -->
+                <section class="input">
+                    <select name="input" id="ddd">
+                        <option value="ddd" disabled selected="ddd">DDD</option>
+                    </select>
+                </section>
+                
+                <!-- Logomarca -->
+                <figure>
+                    <img src="../img/logo-perfil.svg" alt="logo" id="logoOperadora">
+                </figure>
+                
+                <div class="box-txt">
+                    <p>
+                        Para efetuar a compra de seu chip virtual, 
+                        selecione a operadora e o código de área(DDD) desejado.
+                    </p>
+                    <p>
+                        Seu número será enviado para o e-mail cadastrado 
+                        logo que o pagamento seja confirmado com a operadora 
+                        de cartão de crédito.
+                    </p>
+                    <p class="alerta">
+                        *Antes de efetuar a compra de seu chip virtual e-SIM, 
+                        verifique se seu aparelho é compatível com esta tecnologia. 
+                    </p>
+                </div>
+                
+                <div class="btn-container">
+                    <a href="./pagamento.html"><button class="btn-linha4" id = "btnPag">Pagar</button></a>
+                    <a href="../../index.html"><button class="btn-linha4">Fechar</button></a>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <a href="./somos.html" class="bold">Quem somos</a>
+        <p>Todos os direitos reservados - Copyrigth 2021</p>
+        <img src="../img/logo-footer.svg" alt="" />
+    </footer>
+
+<script src = "../js/comprachip.js"></script>
+</body>
+</html>
