@@ -74,3 +74,18 @@ main {
   color: var(--white);
   border-radius: 1.625rem;
 }
+
+@media (max-width: 768px) {
+  .container-perfil {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.8fr 3fr;
+    grid-template-areas: "historico" "solicitacao" "recarga";
+    width: 100%;
+    /* overflow: hidden; */
+    height: auto;
+    margin-top: 120px;
+  }
+  .section-historico {
+    width: 320px;
+  }
