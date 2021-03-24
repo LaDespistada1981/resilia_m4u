@@ -163,19 +163,20 @@ picture {
   margin: 200px auto;
 }
 
-@media(max-width: 768px) {
+footer {
+  position: fixed;
+  bottom: 0;
+}
 
+@media (max-width: 768px) {
   header {
     display: flex;
     flex-direction: column;
-    
   }
 
   .ul-header {
     display: flex;
     flex-direction: column;
-    
-    
   }
 
   .introducao {
@@ -207,8 +208,4 @@ picture {
   .final-page .text-box button {
     margin-bottom: 100px;
   }
-
-
-
-  
 }

@@ -1,17 +1,12 @@
-
-
-
 .container-perfil {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1.5fr 3fr;
+  grid-template-rows: 1fr 2.5fr;
   grid-template-areas: "historico solicitacao" "historico recarga";
-  width: 98.7vw;
+  width: 80%;
   padding: 20px 80px 40px;
   height: auto;
   gap: 1.5rem 3.125rem;
-
-  
 }
 
 .historico .titulo {
@@ -104,8 +99,8 @@
 
 .section-recarga {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.8fr 1fr 1fr 0.8fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   justify-content: space-around;
   background-color: var(--modal-bg);
   grid-area: recarga;
@@ -113,20 +108,31 @@
   padding: 3.125rem;
   gap: 3.125rem;
   box-shadow: 2px 1px 5px 0px rgba(131, 128, 201, 0.57);
-  
 }
 
 .oper {
   margin-top: 24px;
 }
 
-.section-recarga select,
-input {
+.section-recarga input,
+select {
   font-family: var(--font-form);
-  width: 80%;
+  width: 6.25rem;
   border-radius: 0.25rem;
   text-align: center;
   height: 3.25rem;
+}
+
+.ddd {
+  margin-top: 10px;
+}
+.section-recarga .ddd select {
+  font-family: var(--font-form);
+  width: 6.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  height: 1.625rem;
+  margin-top: 5px;
 }
 
 .btn-padrao {
@@ -147,7 +153,7 @@ input {
   border-radius: 10px;
 }
 
-.col4 {
+.col4 input {
   width: 9.375rem;
   height: 3.25rem;
   border-radius: 10px;
@@ -189,7 +195,6 @@ input {
 footer {
   display: flex;
   bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-
 }
