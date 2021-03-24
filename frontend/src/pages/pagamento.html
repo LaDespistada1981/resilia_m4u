@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/pagamento.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins&display=swap" rel="stylesheet">
-    <script src="../js//pagamento.js" defer></script>
     <title>Pagamento</title>
 </head>
 <body>
@@ -29,20 +28,20 @@
         <section class="modal">
             
             <!-- <a href="#close" class="modal-overlay" aria-label="Close"></a> -->
-            <div class="modal-container">
+            <div class="modal-container" >
                 <div class="modal-header">
                     <a href="#close" class="btn btn-clear float-center" aria-label="Close"></a>
                     <img src="../img/logo-login-pgto.svg" alt="Logo FOne">
-                    <div class="modal-title h5 bold">Pagamento</div>
+                    <div class="modal-title h5 bold" id="payments">Pagamento</div>
                 </div>
                 
                 <div section="modal-body">
-                    <div class="content">
+                    <div class="content" id="contentNome">
                         <input class="pag" type="text" name="" id="nome" placeholder="  Nome">
                         <input class="pag" type="text" name="" id="nomeImpresso" placeholder="  Nome impresso no cartão">
                     </div>
 
-                    <div class="div-content">
+                    <div class="div-content" id="contentForme">
                         <select name="produto" id="">
                             <option value="selecione" disabled selected="selecione">Selecione bandeira</option>
                             <option value="master">Master</option>
@@ -54,7 +53,7 @@
                         <input class="column" type="text" name="" id="cvv" placeholder="  CVV">
                     </div>
                     <div class="form-group">
-                        <label class="form-switch">
+                        <label class="form-switch" id="seCad">
                             <input type="checkbox" id = "cadastra">
                             <i class="form-icon"></i>
                             <strong>Cadastrar cartão</strong>
@@ -72,5 +71,6 @@
         <p>Todos os direitos reservados - Copyrigth 2021</p>
         <img src="../img/logo-footer.svg" alt="" />
     </footer>
+    <script src="../js//pagamento.js"></script>
 </body>
 </html>
