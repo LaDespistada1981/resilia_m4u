@@ -1,10 +1,6 @@
-const con = require('../infra/bd-mysql');
+const con = require('../infra/mysql-connection');
 
 module.exports = class usersDAO{
-
-    constructor(bd){
-        this.bd = bd
-    }
 
     showUsers(){
         return new Promise ((resolve, reject) =>
@@ -28,7 +24,7 @@ module.exports = class usersDAO{
 
     logUser(email){
         return (new Promise((resolve, reject)=>{
-            con.query('SELECT * FROM USERS WHERE EMAIL=?', email, (err, rows)=>{
+            con.query('SELECT * FROM USERS WHERE EMAIL=?', [email], (err, rows)=>{
                 if(err){ reject(err)}
                 else{ resolve(rows);
             }
@@ -48,7 +44,7 @@ module.exports = class usersDAO{
             });
     };
 
-    updateUser(usrAtualizado){
+    updateUser(usrUpdated){
         return new Promise((resolve, reject)=>{
             let queryUpdate = "UPDATE USERS SET FULLNAME=?, EMAIL=? WHERE EMAIL=?"
             con.query(queryUpdate, usrUpdated, (error, rows)=>{

@@ -1,6 +1,8 @@
 const usersDAO = require('../DAO/users-DAO')
 const generateHash = require('../crypto/hashGenerator');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 
 
 
@@ -38,17 +40,18 @@ module.exports = (app, bd) => {
   //Login
   app.post('/user/login', async  (req, resp) => {
     try{
-      const loginUser = await uDAO.logUser([req.body.email]);
-      if([req.body.email] != loginUser[0].EMAIL){
+      const loginUser = await uDAO.logUser(req.body.email);
+      console.log(loginUser[0])
+      if(loginUser[0] === undefined){
         return resp.status(401).send("Usuário incorreto")
       }else{ 
         bcrypt.compare(req.body.password, loginUser[0].PASSWORD, (err, result)=>{
           if(err){
-            resp.status(401).send("Senha incorreta.")
+              resp.status(401).send("Senha incorreta.")
           }if(result){
             resp.status(200).send("Autenticação realizada com sucesso.");
           }else{
-            resp.status(401).send('Usuário ou senha incorretos');
+            resp.status(401).send('Autenticação não realizada.');
           }
 
           })

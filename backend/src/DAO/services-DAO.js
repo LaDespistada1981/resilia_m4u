@@ -1,10 +1,6 @@
-const con = require('../infra/bd-mysql')
+const con = require('../infra/mysql-connection')
 
 module.exports = class servicesDAO{
-
-    constructor(bd){
-        this.bd = bd
-    }
 
 
     generateChip(phone){

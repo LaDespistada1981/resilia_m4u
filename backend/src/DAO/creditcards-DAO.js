@@ -1,10 +1,6 @@
-const con = require('../infra/bd-mysql')
+const con = require('../infra/mysql-connection')
 
 module.exports = class creditCardsDAO{
-
-    constructor (bd){
-        this.bd = bd
-    }
 
     collectCreditCard(card){
         return new Promise((resolve, reject) =>{

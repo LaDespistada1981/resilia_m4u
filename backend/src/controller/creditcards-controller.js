@@ -1,5 +1,5 @@
 const creditCardsDAO = require('../DAO/creditcards-DAO');
-const generateHash = require('../crypto/hashGenerator');
+// const generateHash = require('../crypto/hashGenerator');
 
 
 
@@ -29,7 +29,7 @@ app.post('/creditcards/register', async (req, resp)=>{
   }
 })
 
-  app.get("/creditcards",async (req, resp) => {
+  app.get("/creditcards", async (req, resp) => {
       try{
           const cardsData = await cDAO.creditCardsDatabase();
           resp.status(200).send(cardsData);
