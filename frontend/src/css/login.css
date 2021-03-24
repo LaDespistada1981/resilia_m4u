@@ -10,7 +10,7 @@ main {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   background-color: var(--modal-bg);
-  width: 60vw;
+  width: 65vw;
   height: 70vh;
   border-radius: 30px;
 }
@@ -68,13 +68,18 @@ main {
   border-radius: 1.625rem;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
 /* mobile */
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .modal {
-    margin-top: 30%;
+    margin-top: 40%;
     width: 320px;
-    margin-bottom: 50%;
+    margin-bottom: 60%;
   }
 
   .modal-container {

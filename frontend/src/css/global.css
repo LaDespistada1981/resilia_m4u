@@ -73,7 +73,6 @@ footer {
   align-items: center;
   color: var(--white);
   padding: 30px;
-  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -131,7 +130,7 @@ button {
   box-shadow: 3px 3px 11px 1px rgba(207, 206, 224, 0.65);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   header {
     display: flex;
     flex-direction: column;
