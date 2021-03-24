@@ -9,57 +9,66 @@ main {
 
 .modal {
   display: flex;
+  justify-content: center;
   background-color: var(--modal-bg);
   width: 60vw;
-  height: 70vh;
+  height: 60vh;
   border-radius: 30px;
+  margin: auto;
 }
 
 .modal-container {
-  margin: 100px 150px;
+  width: 90%;
+  padding: 5%;
 }
 
 .modal-title {
   font-family: var(--font-geral);
-  font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   margin: 10px 0;
   color: var(--blue-txt);
 }
 
-.content {
+.modal-body {
   width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.content .pag {
+  width: 50%;
+}
+
+.div-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-content input {
+  width: 45%;
+  margin-bottom: 10px;
 }
 
 .form-group {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.form-group strong {
+  color: var(--blue-txt);
 }
 
 .btn-pag {
   width: 9.375rem;
-  height: 3.25rem;
-  font-size: 1.5rem;
-  background-color: var(--blue-button);
-  color: var(--white);
-  border-radius: 1.625rem;
-}
-
-.form-switch strong {
-  color: var(--blue-txt);
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-.btn-fechar {
-  width: 9.375rem;
-  height: 3.25rem;
+  height: 2.25rem;
   font-size: 1.5rem;
   background-color: var(--blue-button);
   color: var(--white);
