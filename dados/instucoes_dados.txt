@@ -1,9 +1,0 @@
-Todos devem criar branches com seus nomes:
-Utilizem o comando:
-git checkout -b branch-carol
-git checkout -b branch-joao
-git checkout -b branch-marcella
-git checkout -b branch-moita
-
-Quem for trabalhar com dados, trabalhem em suas próprias branches e ao final, 
-façam pull request com a branch dados.
