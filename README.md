@@ -14,11 +14,11 @@
 # Projeto 
 <img src="https://i.imgur.com/1d0Ae8h.png" alt="Fone" width="123" height="45.08"/>
 
-Este projeto trata-se do projeto final de conclusão do curso de desenvolvimento web full stack da **Resilia Educação** e foi desenvido ao longo de dois meses no programa de mentoria corporativa da <a href="https://www.resilia.work/"> <img src="https://i.imgur.com/pl1r9l3.png" alt="Resilia" width="75" height="auto"/></a>em parceria com a empresa<a href="https://www.m4u.com.br/"> <img src="https://i.imgur.com/mFC01t3.png" alt="M4U" width="37.08" height="15"/></a>.
+Este projeto trata-se do projeto final de conclusão do curso de desenvolvimento web full stack da **Resilia Educação** e foi desenvolvido ao longo de dois meses no programa de mentoria corporativa da <a href="https://www.resilia.work/"> <img src="https://i.imgur.com/pl1r9l3.png" alt="Resilia" width="75" height="auto"/></a>em parceria com a empresa<a href="https://www.m4u.com.br/"> <img src="https://i.imgur.com/mFC01t3.png" alt="M4U" width="37.08" height="15"/></a>.
 
 Nosso produto **FOne** é uma plataforma de recarga e compra de chips virtuais e-SIM de maneira prática e rápida.
 E o melhor de tudo, sem sair de casa!
-Em  uma platafoma **ÚNICA**, concentramos os serviços de venda de e-chip e recarga de todas as operadoras. 
+Em  uma platafoma **ÚNICA**, concentramos os serviços de venda de e-chip e recarga de todas as operadoras.
 
 
 ## 🚀 Começando
