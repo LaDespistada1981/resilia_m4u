@@ -12,13 +12,13 @@
 <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a><br><br>
 
 # Projeto 
-<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+<img src="https://i.imgur.com/1d0Ae8h.png" alt="Fone" width="123" height="45.08"/>
 
-Este projeto trata-se do projeto final de conclusão do curso de desenvolvimento web full stack da Resilia Educação e foi desenvido ao longo de dois meses no programa de mentoria corporativa da Resilia em parceria com a empresa M4U.
+Este projeto trata-se do projeto final de conclusão do curso de desenvolvimento web full stack da **Resilia Educação** e foi desenvido ao longo de dois meses no programa de mentoria corporativa da <a href="https://www.resilia.work/"> <img src="https://i.imgur.com/pl1r9l3.png" alt="Resilia" width="75" height="auto"/></a>em parceria com a empresa<a href="https://www.m4u.com.br/"> <img src="https://i.imgur.com/mFC01t3.png" alt="M4U" width="37.08" height="15"/></a>.
 
 Nosso produto **FOne** é uma plataforma de recarga e compra de chips virtuais e-SIM de maneira prática e rápida.
 E o melhor de tudo, sem sair de casa!
-Em  uma platafoma ÚNICA, concentramos serviço de venda e recarga de todas as operadoras. 
+Em  uma platafoma **ÚNICA**, concentramos os serviços de venda de e-chip e recarga de todas as operadoras. 
 
 
 ## 🚀 Começando
@@ -58,30 +58,27 @@ Nós usamos [GitHub](https://github.com/) para controle de versão. Para as vers
 
 ## ✏️ Produto | Processo Criativo
 
-### 🔎 Pesquisa Quantitativa e Qualitativa
-<br>
-
-### 🧑‍💻🙎‍♀️ Roteiro Quantitativo
-<br>
-
-### 🧑‍🎤🙎‍♀️ Roteiro Qualitativo
-<br>
-
 ###  💡 Ideação
+A ideia central partiu do conceito de centralidade e acessibilidade.
+
+A escolha do azul foi baseada em conceitos do livro psicologia das cores que aponta o azul como a cor preferida da maioria das pessoas, por ser uma cor que inspira ideias positivas de segurança e confiança e com isso buscamos trazer a fidelidade do usuário .
+
+A plataforma utiliza uma paleta sóbria e clean utilizando apenas tons de azul sobre background branco para garantir um máximo contraste facilitando a usabilidade de pessoas com diferentes graus de daltonismo.
+<img src="https://i.imgur.com/mGp7Gqp.png" alt="Site map" width="450" height="auto"/>
+
 <br>
 
-### 🏷️ Branding
+### 🏷️ Branding | Paleta de cores
+<img src="https://i.imgur.com/lVCPy8r.png" alt="Site map" width="450" height="auto"/>
 <br>
 
-### 📈 Business
-<br>
 
 ### 💻 Sitemap
+<img src="https://i.imgur.com/BuKR1Ip.png" alt="Site map" width="400" height="auto"/>
 <br>
 
-### 📺 Vídeos de Apresentação
 
-* <a href="#">Apresentação</a>
+### 📺 Vídeos de Apresentação
 
 * <a href="https://ladespistada1981.github.io/resilia_m4u/frontend/index.html">Aplicação</a>
 <br><br>
@@ -106,9 +103,9 @@ Nós usamos [GitHub](https://github.com/) para controle de versão. Para as vers
 
 ## 🎁 Expressões de gratidão
 
-* Gostariámos de agradecer a toda equipe da M4U. Obrigade a todes mentores que nos  apoiaram em nossa jornada de aprendizagem ao longo do desenvolvimento desse projeto.
+* Gostariámos de agradecer a toda equipe da **M4U**. Obrigade a todes mentores que nos  apoiaram em nossa jornada de aprendizagem ao longo do desenvolvimento desse projeto.
 
-*  Obrigade a nossos facilitadores e a todo time Resilia Educação por todo apoio e empenho para que chegássemos até aqui.
+*  Obrigade a nossos facilitadores e a todo time **Resilia Educação** por todo apoio e empenho para que chegássemos até aqui.
 <br>
 
 
