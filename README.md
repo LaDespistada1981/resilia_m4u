@@ -11,8 +11,14 @@
 <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a> 
 <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a><br><br>
 
-# Projeto xxx
-Nosso **Projeto FOne** é ...
+# Projeto 
+<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+
+Este projeto trata-se do projeto final de conclusão do curso de desenvolvimento web full stack da Resilia Educação e foi desenvido ao longo de dois meses no programa de mentoria corporativa da Resilia em parceria com a empresa M4U.
+
+Nosso produto **FOne** é uma plataforma de recarga e compra de chips virtuais e-SIM de maneira prática e rápida.
+E o melhor de tudo, sem sair de casa!
+Em  uma platafoma ÚNICA, concentramos serviço de venda e recarga de todas as operadoras. 
 
 
 ## 🚀 Começando
@@ -22,10 +28,13 @@ Essas instruções permitirão que você consiga ter esse projeto em operação 
 
 ### 📋 Pré-requisitos para instalação 🔧
 
+==> Para ter acesso ao backend da aplicação:
 * Instale NodeJS em seu computador.
 * Baixe os aquivos do repositório aqui no GitHub.
-* Entre na pasta Back-end e instale via terminal utilizando o comando: npm install.
-* Continuar com as instruções...
+* Entre na pasta back-end e instale via terminal utilizando o comando: npm install.
+  
+==> Para ter acesso ao front-end: 
+* Abra o arquivo index.html da pasta frontend em seu navegador.
 <br><br>
 
 ## 📦 Desenvolvimento
@@ -34,13 +43,11 @@ Essas instruções permitirão que você consiga ter esse projeto em operação 
 
 * [Figma](https://www.figma.com/) - Design UX-UI.
 * [Trello](https://trello.com/b/WsYtHrI4/time-a-projeto-m4u) - Gestão de Projetos.
-* [React JS](https://pt-br.reactjs.org/docs/getting-started.html) - Biblioteca utilizada no Front-end.
 * [NodeJS](https://nodejs.org/pt-br/docs/) - Framework utilizado no Back-end.
 * [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Linguagem utilizada no Front e Back-end.
 * [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Linguagem de marcação utilizada no Front-end.
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - Utilizado para estilização das páginas no Front-end.
 * [MySQL](https://dev.mysql.com/doc/) - Gerenciador de Banco de dados.
-* [Metabase](https://www.metabase.com/docs/latest/) - Análise de dados e Business Intelligence.
 * [Docker](https://docs.docker.com/) - Criação de ambiente de desenvolvimento.
 <br><br>
 
@@ -82,15 +89,17 @@ Nós usamos [GitHub](https://github.com/) para controle de versão. Para as vers
 ## ✒️ Criadores
 <br>
 
-⚙️📀 **Caroline Noronha** - *Back-end e Dados* - [GitHub](https://github.com/carolinenoronha)
+⚙️📀 **Caroline Noronha** - *Back-end e Front-end* - [GitHub](https://github.com/carolinenoronha) | [LinkedIn](https://www.linkedin.com/in/caroline-noronha-teixeira/)
 
-💻 **João Vitor Granjeiro** - *Front-end* - [GitHub](https://github.com/)
 
-⚙️📀 **Marcella Justo** - *Back-end e Dados* - [GitHub](https://github.com/justo-marcella)
 
-💻**Marcelo Moita** - *Front-end* - [GitHub](https://github.com/Moitank)
+💻 **João Vitor Granjeiro** - *Front-end* - [GitHub](https://github.com/https://github.com/Joao-vitor-Gr) | [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-vitor-grangeiro/)
 
-🚀💡💻 **Roberta Santos** - *Produto, Design UX-UI e Front-end* - [GitHub](https://github.com/LaDespistada1981)
+⚙️📀 **Marcella Justo** - *Back-end e Dados* - [GitHub](https://github.com/justo-marcella) | [LinkedIn](https://www.linkedin.com/in/marcella-justo-1706/)
+
+💻**Marcelo Moita** - *Front-end* - [GitHub](https://github.com/Moitank) | [LinkedIn](https://www.linkedin.com/in/marcelomoita/)
+
+🚀💡💻 **Roberta Santos** - *Produto, Design UX-UI e Front-end* - [GitHub](https://github.com/LaDespistada1981) | [LinkedIn](https://www.linkedin.com/in/santosroberta/)
 
 <br>
 
